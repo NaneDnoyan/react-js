@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index8.js"></script>
+    <style>
+      #div {
+        margin: auto;
+        width: 700px;
+        height: 250px;
+        background-color: aquamarine;
+        font-size: 20px;
+        color: white;
+        border-color: azure;
+      }
+      p {
+        width: 650px;
+        height: 200px;
+        margin: auto;
+        background-color: green;
+      }
+      form {
+        margin: auto;
+        width: 750px;
+        height: 300px;
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button id="button" onclick="sayHi()">Say Hello</button> -->
+    <!-- <button id="button">Say Hello</button> -->
+    <form id="form">
+      <div id="div">
+        <p id="p"></p>
+      </div>
+    </form>
+
+    <script>
+      // function sayHi() {
+      //   alert("Hello");
+      // }
+      // const button = document.getElementById("button");
+      // button.onclick = function () {
+      //   alert("hello");
+      // };
+
+      // button.onclick = sayHi;
+
+      // button.onclick = function () {
+      //   alert("Bye");
+      // };
+
+      // button.addEventListener("click", sayHi);
+
+      // setTimeout(() => {
+      //   button.removeEventListener("click", sayHi);
+      // }, 4000);
+
+      // button.addEventListener("click", function (event) {
+      //   console.log("event", event);
+      // });
+
+      // class Info {
+      //   handleEvent(event) {
+      //     switch (event.type) {
+      //       case "mousedown":
+      //         button.innerHTML = "Button is down!";
+      //         break;
+      //       case "mouseup":
+      //         button.innerHTML = "Button is up!";
+      //         break;
+      //     }
+      //   }
+      // }
+
+      // const info = new Info();
+
+      // button.addEventListener("mousedown", info);
+      // button.addEventListener("mouseup", info);
+
+      form.addEventListener("click", function (e) {
+        e.stopPropagation();
+        alert("form");
+      });
+      div.addEventListener("click", function (e) {
+        e.stopPropagation();
+        alert("div");
+      });
+      p.addEventListener("click", function (e) {
+        e.stopPropagation();
+        alert("p");
+      });
+    </script>
+  </body>
+</html>
